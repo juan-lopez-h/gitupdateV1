@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i in $(seq -w 1 27)
+for i in $(seq -w 22 27)
 do
     echo "Actividad $i" >> historial.txt
 
@@ -9,7 +9,7 @@ do
     HORA=$((RANDOM % 8 + 8))
     MIN=$((RANDOM % 60))
 
-    FECHA="2026-05-$i $(printf "%02d:%02d:00" $HORA $MIN)"
+    FECHA="2026-06-$i $(printf "%02d:%02d:00" $HORA $MIN)"
 
     GIT_AUTHOR_DATE="$FECHA" \
     GIT_COMMITTER_DATE="$FECHA" \
